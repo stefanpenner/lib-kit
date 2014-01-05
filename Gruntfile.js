@@ -30,7 +30,8 @@ module.exports = function(grunt) {
     'concat:deps',
     'browserify:tests',
     'transpile:testsAmd',
-    'transpile:testsCommonjs'
+    'transpile:testsCommonjs',
+    'concat:amdNodeTests' // yet another hack to get es6 transpiled tests
   ]);
 
   // Build a new version of the library

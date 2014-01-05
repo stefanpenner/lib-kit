@@ -33,5 +33,18 @@ module.exports = {
       'tmp/<%= pkg.name %>.amd.js'
     ],
     dest: 'tmp/<%= pkg.name %>.browser1.js'
+  },
+
+  amdNodeTests: {
+    src: [
+      'vendor/loader.js',
+      'dist/thing.amd.js',
+      'tmp/tests.amd.js',
+    ],
+    dest: 'tmp/tests.node.js',
+    options: {
+      banner: 'var assert = require("../test/vendor/assert");',
+      footer: '\n;Object.keys(require.entries).filter(function(file) { return /_test$/.test(file); }).map(require);'
+    }
   }
 };

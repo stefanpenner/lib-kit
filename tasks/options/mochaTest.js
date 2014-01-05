@@ -1,9 +1,8 @@
 module.exports = {
   test: {
     src: [
-      'test/vendor/assert.js',
-      'test/test-adapter.js',
-      'tmp/tests.cjs.js'
+      'test/main.js',
+      'tmp/tests.node.js'
     ],
     options: {
       reporter: 'spec'
