@@ -20,7 +20,9 @@
   <script src='../tmp/tests.amd.js'></script>
   <script>
 
-    require('test/tests/thing_test');
+    Object.keys(require.entries).filter(function(file) {
+      return /_test$/.test(file);
+    }).map(require);
 
     if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
     else { mocha.globals(['setTimeout']); mocha.run(); }

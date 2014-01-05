@@ -11,11 +11,18 @@ module.exports = function(grunt) {
 
 // Run client-side tests on the command line.
   this.registerTask('test', 'Runs tests through the command line using PhantomJS', [
-    'build', 'tests', 'connect'
+    'build',
+    'tests',
+    'connect'
   ]);
 
   // Run a server. This is ideal for running the QUnit tests in the browser.
-  this.registerTask('server', ['build', 'tests', 'connect', 'watch:server']);
+  this.registerTask('server', [
+    'build',
+    'tests',
+    'connect',
+    'watch:server'
+  ]);
 
 
   // Build test files
@@ -42,12 +49,23 @@ module.exports = function(grunt) {
 
   // Custom phantomjs test task
   this.registerTask('test:phantom', "Runs tests through the command line using PhantomJS", [
-                    'build', 'tests']);
+    'build',
+    'tests'
+  ]);
 
   // Custom Node test task
-  this.registerTask('test:node', ['build', 'tests', 'mochaTest']);
+  this.registerTask('test:node', [
+    'build',
+    'tests',
+    'mochaTest'
+  ]);
 
-  this.registerTask('test', ['build', 'tests', 'mocha_phantomjs']);
+  this.registerTask('test', [
+    'build',
+    'tests',
+    'mocha_phantomjs',
+    'mochaTest'
+  ]);
 
   this.registerTask('build-release', [
     'clean:build',

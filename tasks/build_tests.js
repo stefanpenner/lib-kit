@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 
       testFiles.forEach(function(file) {
         var moduleName = nameFor(file);
-        output.push('requireModule("' + nameFor(file) + '");');
+        output.push('require("' + nameFor(file) + '");');
       });
 
       output.push('})(window);');

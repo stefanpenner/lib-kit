@@ -1,4 +1,4 @@
-var define, require, requireModule,  requirejs;
+var define, require;
 
 (function() {
   var registry = {}, seen = {};
@@ -7,14 +7,13 @@ var define, require, requireModule,  requirejs;
     registry[name] = { deps: deps, callback: callback };
   };
 
-  requirejs = require = requireModule = function(name) {
-  requirejs._eak_seen = registry;
+  require = function(name) {
 
     if (seen[name]) { return seen[name]; }
     seen[name] = {};
 
     if (!registry[name]) {
-      throw new Error("Could not find module " + name);
+      throw new Error('Could not find module ' + name);
     }
 
     var mod = registry[name],
@@ -50,4 +49,5 @@ var define, require, requireModule,  requirejs;
       return parentBase.join("/");
     }
   };
+  require.entries = registry;
 })();
