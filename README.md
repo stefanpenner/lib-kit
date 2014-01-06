@@ -1,1 +1,4 @@
-#Thing.js  [![Build Status](https://secure.travis-ci.org/orgnaization/thing.js.png?branch=master)](http://travis-ci.org/organizationg/thing.js)
+# Readme [![Build Status](https://secure.travis-ci.org/stefanpenner/lib-kit.png?branch=master)](http://travis-ci.org/stefanpenner/lib-kit)
+
+
+Todo
