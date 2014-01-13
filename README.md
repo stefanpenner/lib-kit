@@ -18,20 +18,18 @@ dependencies, and rebuild as needed. Additionally, navigating to
 http://127.0.0.1:8000, will display the browser tests.
 
 ```sh
-grunt server
-
-PORT=<optional port> grunt server // feel free to provide an alternative
-port if 8000 doesn't work for you
+grunt server           # http://127.0.0.1:8000/
+PORT=9292 grunt server # http://127.0.0.1:9292/
 ```
 
 Testing:
 --------
 
 ```sh
-grunt test         // headless testing (phantom + node)
-grunt test:node    // node
-grunt test:phantom // phantom
-grunt server       // browser (navigate to http://127.0.0.1:8000)
+grunt test         # headless testing (phantom + node)
+grunt test:node    # node
+grunt test:phantom # phantom
+grunt server       # browser (navigate to http://127.0.0.1:8000)
 ```
 
 Releasing
@@ -48,11 +46,11 @@ grunt release-it:0.0.1
 Adding dependencies:
 --------------------
 
-- npm (todo)
+- npm
 
 ```sh
-npm install <package_name> --save     // runtime dependency
-npm install <package_name> --save-dev // dev-dependency
+npm install <package_name> --save     # runtime dependency
+npm install <package_name> --save-dev # dev-dependency
 ```
 
 - bower (todo)
