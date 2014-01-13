@@ -1,6 +1,9 @@
 module.exports = {
   options: {
-    pkgFiles: [ 'package.json', 'bower.json' ],
+    pkgFiles: [
+      'package.json',
+      'bower.json'
+    ],
     srcRepo: '<%= pkg.srcRepo %>',
     distRepo: '<%= pkg.distRepo ',
     distStageDir: 'tmp/stage',
