@@ -39,8 +39,7 @@ Releasing
 - npm
 
 ```sh
-grunt build-release
-grunt release-it:0.0.1
+grunt build-release release-it:0.0.1
 ```
 
 Adding dependencies:
