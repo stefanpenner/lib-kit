@@ -27,14 +27,16 @@
     "mocha-phantomjs": "~3.1.6",
     "connect-redirection": "0.0.1",
     "grunt-contrib-yuidoc": "~0.5.0",
-    "grunt-release-it": "0.0.3"
+    "grunt-release-it": "0.0.3",
+    "qunit": "~0.5.18",
+    "es6-module-transpiler": "~0.3.6"
   },
   "scripts": {
-    "test": "grunt test",
+    "test": "node test",
     "lint": "jshint lib",
     "prepublish": "grunt build"
   },
-  "keywords": [ ],
+  "keywords": [],
   "author": "",
   "license": "MIT"
 }
