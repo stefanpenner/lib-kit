@@ -1,5 +1,5 @@
 {
-    "predef": [
+    "globals": [
         "console",
         "require",
         "equal",
@@ -18,7 +18,7 @@
 
     "node" : true,
     "browser" : true,
-
+    "esnext": true,
     "boss" : true,
     "curly": false,
     "debug": false,
