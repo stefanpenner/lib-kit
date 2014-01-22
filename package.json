@@ -1,6 +1,5 @@
 {
   "name": "thing",
-  "namespace": "thing",
   "version": "0.0.1",
   "description": "",
   "main": "dist/commonjs/main.js",

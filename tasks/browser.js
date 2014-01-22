@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 
       output.push.apply(output, f.src.map(grunt.file.read));
 
-      output.push("global.<%= pkg.namespace %> = require('<%= pkg.name %>');");
+      output.push("global.<%= pkg.name.charAt(0).toUpperCase() + pkg.name.slice(1)%> = require('<%= pkg.name %>');");
       output.push('}(window));');
 
       grunt.file.write(f.dest, grunt.template.process(output.join('\n')));
